@@ -1,2 +1,5 @@
 # modui
-A modular UI library for Gamemaker Studio 2.
+
+#dependencies:
+Clean Shapes (JujuAdams): https://github.com/JujuAdams/Clean-Shapes  
+Scribble (JujuAdams): https://github.com/JujuAdams/scribble
