@@ -1,3 +1,4 @@
-function modui_clickable_rectangle(){
+function modui_clickable_rectangle()
+{
 
 }

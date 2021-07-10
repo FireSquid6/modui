@@ -50,6 +50,7 @@
     {"id":{"name":"scribble_glyph_get","path":"scripts/scribble_glyph_get/scribble_glyph_get.yy",},"order":6,},
     {"id":{"name":"__shdCleanAntialias","path":"shaders/__shdCleanAntialias/__shdCleanAntialias.yy",},"order":1,},
     {"id":{"name":"scribble_rgb_to_bgr","path":"scripts/scribble_rgb_to_bgr/scribble_rgb_to_bgr.yy",},"order":1,},
+    {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},"order":2,},
     {"id":{"name":"obj_menu","path":"objects/obj_menu/obj_menu.yy",},"order":0,},
     {"id":{"name":"__scribble_class_null_element","path":"scripts/__scribble_class_null_element/__scribble_class_null_element.yy",},"order":4,},
     {"id":{"name":"CleanTransformOriginGet","path":"scripts/CleanTransformOriginGet/CleanTransformOriginGet.yy",},"order":4,},

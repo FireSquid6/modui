@@ -79,7 +79,12 @@ function clickable_sprite(_x,_y,_sprite,_subimg) constructor
 	width=sprite_get_width(sprite_index)*image_xscale
 	height=sprite_get_height(sprite_index)*image_yscale
 	
+	//vars
 	isSelected=false
+	mx=0
+	my=0
+	drawType=DEFAULT_DRAW
+	
 	
 	//subimage change
 	doSubimgChange=false
@@ -105,6 +110,9 @@ function clickable_sprite(_x,_y,_sprite,_subimg) constructor
 	//functions
 	update=function()
 	{
+		//get mouse
+		__ui_get_mouse_pos(drawType)
+		
 		//get width and height
 		width=sprite_get_width(sprite_index)*image_xscale
 		height=sprite_get_height(sprite_index)*image_yscale
