@@ -24,41 +24,6 @@ function clickable_sprite(_x,_y,_sprite,_subimg) constructor
 		image_yscale=_yscale
 	}
 	
-	//overlay
-	addOverlayChange=function(_color,_alpha) //ONLY WORKS IF ORIGIN IS IN THE CENTER OF THE SPRITE
-	{
-		doOverlayChange=true
-		overlayChangeColor=_color
-		overlayChangeAlpha=_alpha
-	}
-	removeOverlayChange=function()
-	{
-		doOverlayChange=false
-	}
-	
-	//subimg
-	addSubimgChange=function(_othersubimg)
-	{
-		doSubimgChange=true
-		subimgChangeSubimg=_othersubimg
-	}
-	removeSubimgChange=function()
-	{
-		doSubimgChange=false
-	}
-	
-	//blend
-	addBlendChange=function(_color,_alpha)
-	{
-		doBlendChange=true
-		blendChangeColor=_color
-		blendChangeAlpha=_alpha
-	}
-	removeBlendChange=function()
-	{
-		doBlendChange=false
-	}
-	
 	#endregion
 	
 	#region DEFAULT VARS
