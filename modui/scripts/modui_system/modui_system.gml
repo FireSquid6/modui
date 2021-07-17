@@ -33,3 +33,26 @@ function __ui_get_mouse_pos(_drawType)
 			break
 	}
 }
+
+enum SELECTION_TYPES
+{
+	MOUSE,
+	GRID,
+}
+
+function modui_create_system(_selectionType) constructor
+{
+	selectionType=_selectionType
+	elementsList=ds_list_create()
+	
+	add_element=function(_element)
+	{
+		_element.selectionType=selectionType
+		ds_list_add(elementsList,_element)
+	}
+	
+	update=function()
+	{
+		
+	}
+}

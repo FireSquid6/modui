@@ -113,11 +113,11 @@
     {"folderPath":"folders/Example.yy","order":3,"resourceVersion":"1.0","name":"Example","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Libraries.yy","order":4,"resourceVersion":"1.0","name":"Libraries","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Libraries/ModUI.yy","order":2,"resourceVersion":"1.0","name":"ModUI","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Libraries/ModUI/System/Buttons.yy","order":3,"resourceVersion":"1.0","name":"Buttons","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Libraries/ModUI/System/Button.yy","order":3,"resourceVersion":"1.0","name":"Button","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Libraries/ModUI/System.yy","order":2,"resourceVersion":"1.0","name":"System","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Libraries/ModUI/System/List.yy","order":4,"resourceVersion":"1.0","name":"List","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Libraries/ModUI/Built In Effects.yy","order":3,"resourceVersion":"1.0","name":"Built In Effects","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Libraries/ModUI/Built In Effects/Buttons.yy","order":1,"resourceVersion":"1.0","name":"Buttons","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Libraries/ModUI/Built In Effects/Button Effects.yy","order":1,"resourceVersion":"1.0","name":"Button Effects","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

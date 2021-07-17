@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Libraries/ModUI/System/Buttons.yy",
+    "name": "Button",
+    "path": "folders/Libraries/ModUI/System/Button.yy",
   },
   "resourceVersion": "1.0",
   "name": "modui_button_sprite",

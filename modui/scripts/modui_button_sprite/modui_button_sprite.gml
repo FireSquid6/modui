@@ -6,8 +6,8 @@
 
 
 //CLICKABLE SPRITE
-function clickable_sprite(_x,_y,_sprite,_subimg) constructor
-{
+function modui_button_sprite(_x,_y,_sprite,_subimg) : modui_button_parent() constructor
+{	
 	#region MODIFYING FUNCTIONS
 	//change format
 	changeFormat=function(_defaultsubimg,_defaultblend,_defaultalpha)
@@ -22,6 +22,12 @@ function clickable_sprite(_x,_y,_sprite,_subimg) constructor
 	{
 		image_xscale=_xscale
 		image_yscale=_yscale
+	}
+	
+	//grid position
+	change_grid_position=function()
+	{
+		
 	}
 	
 	#endregion
@@ -50,20 +56,6 @@ function clickable_sprite(_x,_y,_sprite,_subimg) constructor
 	my=0
 	drawType=DEFAULT_DRAW
 	
-	
-	//subimage change
-	doSubimgChange=false
-	subimgChangeSubimg=1
-	
-	//overlay change
-	doOverlayChange=false
-	overlayChangeColor=c_white
-	overlayChangeAlpha=1
-	
-	//blend change
-	doBlendChange=false
-	blendChangeColor=c_white
-	blendChangeAlpha=1
 	#endregion
 	
 	#region STEP FUNCTIONS
@@ -71,6 +63,8 @@ function clickable_sprite(_x,_y,_sprite,_subimg) constructor
 	updateFunctions=ds_list_create()
 	postDrawFunctions=ds_list_create()
 	preDrawFunctions=ds_list_create()
+	pressFunctions=ds_list_create()
+	selectFunctions=ds_list_create()
 	
 	//functions
 	update=function()
@@ -84,7 +78,8 @@ function clickable_sprite(_x,_y,_sprite,_subimg) constructor
 		
 		//get hover
 		isSelected=__ui_check_hover(x,y,x+width,y+height)
-		if __ui_check_clicked(isSelected) onClick()
+		if isSelected loop_through_function_list(selectFunctions)
+		if __ui_check_clicked(isSelected) loop_through_function_list(pressFunctions)
 		
 		image_index=subimg
 		image_blend=blend
@@ -92,27 +87,6 @@ function clickable_sprite(_x,_y,_sprite,_subimg) constructor
 		
 		//added functions
 		loop_through_function_list(updateFunctions)
-		
-		//apply changes
-		if isSelected
-		{
-			//change based on hover
-			if doSubimgChange
-			{
-				image_index=subimgChangeSubimg
-			}
-			if doBlendChange
-			{
-				image_blend=blendChangeColor
-				image_alpha=blendChangeAlpha
-			}
-		}
-		
-	}
-	
-	onClick=function()
-	{
-		//set this method to something useful post-create
 	}
 	
 	draw=function()
@@ -124,21 +98,6 @@ function clickable_sprite(_x,_y,_sprite,_subimg) constructor
 		
 		//post draw
 		loop_through_function_list(postDrawFunctions)
-		
-		//overlay
-		if doOverlayChange && isSelected
-		{
-			draw_set_alpha(overlayChangeAlpha)
-			draw_set_color(overlayChangeColor)
-			
-			draw_rectangle(x,y,x+width,y+height,false)
-			
-			draw_set_alpha(1)
-			draw_set_color(1)
-		}
-		
-		draw_text(x,y,string(isSelected))
 	}
-	
 	#endregion
 }
