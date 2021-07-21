@@ -12,9 +12,9 @@ function modui_button_sprite(_x,_y,_sprite,_subimg) : modui_button_parent() cons
 	//change format
 	changeFormat=function(_defaultsubimg,_defaultblend,_defaultalpha)
 	{
-		blend=_defaultblend
-		subimg=_defaultsubimg
-		alpha=_defaultalpha
+		image_blend=_defaultblend
+		image_index=_defaultsubimg
+		image_alpha=_defaultalpha
 	}
 	
 	//transform
@@ -44,9 +44,6 @@ function modui_button_sprite(_x,_y,_sprite,_subimg) : modui_button_parent() cons
 	image_blend=c_white
 	image_angle=0
 	image_alpha=1
-	subimg=_subimg
-	blend=c_white
-	alpha=1
 	width=sprite_get_width(sprite_index)*image_xscale
 	height=sprite_get_height(sprite_index)*image_yscale
 	
@@ -70,20 +67,18 @@ function modui_button_sprite(_x,_y,_sprite,_subimg) : modui_button_parent() cons
 	update=function()
 	{
 		//get mouse
-		__ui_get_mouse_pos(drawType)
+		__modui_get_mouse_pos(drawType)
 		
 		//get width and height
 		width=sprite_get_width(sprite_index)*image_xscale
 		height=sprite_get_height(sprite_index)*image_yscale
 		
-		//get hover
-		isSelected=__ui_check_hover(x,y,x+width,y+height)
+		//selected
+		isSelected=__modui_check_hover(x,y,x+width,y+height)
 		if isSelected loop_through_function_list(selectFunctions)
-		if __ui_check_clicked(isSelected) loop_through_function_list(pressFunctions)
 		
-		image_index=subimg
-		image_blend=blend
-		image_alpha=alpha
+		//pressed
+		if __modui_check_clicked(isSelected) loop_through_function_list(pressFunctions)
 		
 		//added functions
 		loop_through_function_list(updateFunctions)

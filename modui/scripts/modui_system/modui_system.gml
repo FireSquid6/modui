@@ -1,5 +1,5 @@
 //Checks if this UI element is "selected"
-function __ui_check_hover(_x1,_y1,_x2,_y2)
+function __modui_check_hover(_x1,_y1,_x2,_y2)
 {
 	var ret=false
 	if point_in_rectangle(mx,my,_x1,_y1,_x2,_y2) ret=true
@@ -7,14 +7,14 @@ function __ui_check_hover(_x1,_y1,_x2,_y2)
 }
 
 //Checks if this UI element has been "clicked" on
-function __ui_check_clicked(_hover)
+function __modui_check_clicked(_hover)
 {
 	if _hover && mouse_check_button_pressed(mb_left) return true
 	return false
 }
 
 //get mouse pos
-function __ui_get_mouse_pos(_drawType)
+function __modui_get_mouse_pos(_drawType)
 {
 	switch _drawType
 	{
@@ -40,7 +40,7 @@ enum SELECTION_TYPES
 	GRID,
 }
 
-function modui_create_system(_selectionType) constructor
+function modui_system(_selectionType) constructor
 {
 	selectionType=_selectionType
 	elementsList=ds_list_create()

@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Button Effects",
-    "path": "folders/Libraries/ModUI/Built In Effects/Button Effects.yy",
+    "path": "folders/Libraries/ModUI/Included Effects/Button Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "change_subimg",
