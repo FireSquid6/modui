@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Button",
-    "path": "folders/Libraries/ModUI/System/Button.yy",
+    "name": "System",
+    "path": "folders/Libraries/ModUI/System.yy",
   },
   "resourceVersion": "1.0",
-  "name": "modui_button_sprite",
+  "name": "modui_canvas",
   "tags": [],
   "resourceType": "GMScript",
 }

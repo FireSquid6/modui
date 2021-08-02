@@ -1,14 +1,25 @@
-//mouse settings
+//Default grid width and height for grid selection
+#macro MODUI_GRID_WIDTH 25
+#macro MODUI_GRID_HEIGHT 25
+
+//DONT EDIT THESE
 enum MODUI_DRAW_TYPES
 {
-	DEFAULT,
+	NORMAL,
 	GUI
 }
 
-#macro DEFAULT_DRAW MODUI_DRAW_TYPES.GUI
+enum MODUI_EVENTS
+{
+	UPDATE, //every frames
+	SELECTED, //when the element is "selected" via mouse hovering or grid selection
+	PRESSED, //when the element is "clicked on" via mouse or grid
+	PREDRAW, //draw event before the element draws itself
+	POSTDRAW //draw event after the element draws itself
+}
 
-#macro GET_MOUSE_X_GUI device_mouse_x_to_gui(0)
-#macro GET_MOUSE_Y_GUI device_mouse_y_to_gui(0)
-
-#macro GET_MOUSE_X_DRAW mouse_x
-#macro GET_MOUSE_Y_DRAW mouse_y
+enum MODUI_ELEMENT_TYPES
+{
+	BUTTON,
+	SLIDER
+}

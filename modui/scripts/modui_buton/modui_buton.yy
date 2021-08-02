@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Button",
-    "path": "folders/Libraries/ModUI/System/Button.yy",
+    "name": "Elements",
+    "path": "folders/Libraries/ModUI/Elements.yy",
   },
   "resourceVersion": "1.0",
-  "name": "modui_button_parent",
+  "name": "modui_buton",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "System",
-    "path": "folders/Libraries/ModUI/System.yy",
+    "name": "Elements",
+    "path": "folders/Libraries/ModUI/Elements.yy",
   },
   "resourceVersion": "1.0",
-  "name": "modui_system",
+  "name": "modui_dnd",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Button Effects",
-    "path": "folders/Libraries/ModUI/Included Effects/Button Effects.yy",
+    "name": "Elements",
+    "path": "folders/Libraries/ModUI/Elements.yy",
   },
   "resourceVersion": "1.0",
-  "name": "change_subimg",
+  "name": "modui_slider",
   "tags": [],
   "resourceType": "GMScript",
 }

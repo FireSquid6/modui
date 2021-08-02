@@ -62,6 +62,11 @@ function modui_canvas(_drawType) constructor
 		var cursor_x=get_mouse_x()
 		var cursor_y=get_mouse_y()
 		
+		if keyboard_check(vk_space)
+		{
+			imposter="sus"
+		}
+		
 		//loop through each element
 		var length=array_length(elements)
 		for (var i=0; i<length; i++)
