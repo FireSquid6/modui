@@ -22,7 +22,19 @@ function modui_button(_sprite,_subimage,_x,_y) constructor
 	//other vars
 	//don't edit these
 	selected=false
+	canvasRef=-1
+	cursor_x=0
+	cursor_y=0
+	pressed=0
 	
+	//function lists
+	update_list=ds_list_create()
+	selected_list=ds_list_create()
+	pressed_list=ds_list_create()
+	predraw_list=ds_list_create()
+	postdraw_list=ds_list_create()
+	
+	//static methods
 	static change_bbox=function(_left,_top,_right,_bottom)
 	{
 		bbox_left=_left
@@ -53,14 +65,6 @@ function modui_button(_sprite,_subimage,_x,_y) constructor
 		}
 	}
 	
-	//function lists
-	update_list=ds_list_create()
-	selected_list=ds_list_create()
-	pressed_list=ds_list_create()
-	predraw_list=ds_list_create()
-	postdraw_list=ds_list_create()
-	
-	//static methods
 	static update=function()
 	{
 		//update functions

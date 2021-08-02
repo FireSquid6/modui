@@ -45,6 +45,7 @@
     {"id":{"name":"__shd_scribble_bake_outline","path":"shaders/__shd_scribble_bake_outline/__shd_scribble_bake_outline.yy",},"order":12,},
     {"id":{"name":"CleanTransformAddMove","path":"scripts/CleanTransformAddMove/CleanTransformAddMove.yy",},"order":0,},
     {"id":{"name":"CleanBatchBegin","path":"scripts/CleanBatchBegin/CleanBatchBegin.yy",},"order":0,},
+    {"id":{"name":"modui_makered","path":"scripts/modui_makered/modui_makered.yy",},"order":0,},
     {"id":{"name":"CleanLine","path":"scripts/CleanLine/CleanLine.yy",},"order":5,},
     {"id":{"name":"CleanCapsule","path":"scripts/CleanCapsule/CleanCapsule.yy",},"order":0,},
     {"id":{"name":"__scribble_init","path":"scripts/__scribble_init/__scribble_init.yy",},"order":10,},
@@ -114,6 +115,8 @@
     {"folderPath":"folders/Libraries/ModUI.yy","order":2,"resourceVersion":"1.0","name":"ModUI","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Libraries/ModUI/Elements.yy","order":3,"resourceVersion":"1.0","name":"Elements","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Libraries/ModUI/System.yy","order":4,"resourceVersion":"1.0","name":"System","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Libraries/ModUI/Built In Effects.yy","order":6,"resourceVersion":"1.0","name":"Built In Effects","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Libraries/ModUI/Built In Effects/Button.yy","order":1,"resourceVersion":"1.0","name":"Button","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
