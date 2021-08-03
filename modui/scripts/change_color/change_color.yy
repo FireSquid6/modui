@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Button",
-    "path": "folders/Libraries/ModUI/Built In Effects/Button.yy",
+    "name": "Effects",
+    "path": "folders/Libraries/ModUI/Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "change_color",

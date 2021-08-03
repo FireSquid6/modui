@@ -1,8 +1,9 @@
 //init canvas
 canvas=new modui_canvas()
+global.modui_debug=true
 
 //coolbox
-var coolbox=new modui_button_sprite(spr_box,1,250,250)
+var coolbox=new modui_button_sprite(spr_box,1,50,50)
 coolbox.transform(250,250,4,4)
 
 //add function

@@ -40,11 +40,6 @@ function modui_canvas() constructor
 		var changePressed=elements[pressedPosition].pressed
 		var doChange=!(changeSelection && changePressed)
 		
-		if keyboard_check(vk_space)
-		{
-			imposter="sus"
-		}
-		
 		//loop through each element
 		var length=array_length(elements)
 		for (var i=0; i<length; i++)
@@ -87,19 +82,39 @@ function modui_canvas() constructor
 		{
 			elements[i].draw()
 			
-			var bboxl=elements[i].bbox_left
-			var bboxr=elements[i].bbox_right
-			var bboxt=elements[i].bbox_top
-			var bboxb=elements[i].bbox_bottom
-			draw_set_color(c_aqua)
-			draw_rectangle(bboxl,bboxt,bboxr,bboxb,true)
-			draw_set_color(c_white)
+			if global.modui_debug
+			{
+				var bboxl=elements[i].bbox_left
+				var bboxr=elements[i].bbox_right
+				var bboxt=elements[i].bbox_top
+				var bboxb=elements[i].bbox_bottom
+				draw_set_color(c_aqua)
+				draw_rectangle(bboxl,bboxt,bboxr,bboxb,true)
+				draw_set_color(c_white)
+			}
 		}
 		
-		//draw cursor
-		draw_set_color(c_aqua)
-		draw_circle(cursor_x,cursor_y,4,false)
-		draw_set_color(c_white)
+		//draw debug
+		if global.modui_debug
+		{
+			draw_set_color(c_aqua)
+			
+			//draw cursor
+			draw_circle(cursor_x,cursor_y,4,false)
+			
+			//draw bbox
+			var length=array_length(elements)
+			for (var i=0; i<length; i++)
+			{
+				var bboxl=elements[i].bbox_left
+				var bboxr=elements[i].bbox_right
+				var bboxt=elements[i].bbox_top
+				var bboxb=elements[i].bbox_bottom
+				draw_rectangle(bboxl,bboxt,bboxr,bboxb,true)
+			}
+			
+			draw_set_color(c_white)
+		}
 	}
 	
 	static destroy=function()
