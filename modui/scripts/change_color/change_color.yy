@@ -6,7 +6,7 @@
     "path": "folders/Libraries/ModUI/Built In Effects/Button.yy",
   },
   "resourceVersion": "1.0",
-  "name": "modui_makered",
+  "name": "change_color",
   "tags": [],
   "resourceType": "GMScript",
 }

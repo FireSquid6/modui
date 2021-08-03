@@ -1,4 +1,4 @@
-function modui_button(_sprite,_subimage,_x,_y) constructor
+function modui_button_sprite(_sprite,_subimage,_x,_y) constructor
 {
 	//default transform and display vars
 	//you can edit these
@@ -16,8 +16,8 @@ function modui_button(_sprite,_subimage,_x,_y) constructor
 	//default bbox variables, can be changed with change_bbox
 	bbox_left=x
 	bbox_top=y
-	bbox_right=x+sprite_get_width(sprite_index)
-	bbox_bottom=y+sprite_get_height(sprite_index)
+	bbox_right=x+sprite_get_width(sprite_index)*image_xscale
+	bbox_bottom=y+sprite_get_height(sprite_index)*image_yscale
 	
 	//other vars
 	//don't edit these
@@ -28,19 +28,34 @@ function modui_button(_sprite,_subimage,_x,_y) constructor
 	pressed=0
 	
 	//function lists
+	init_list=ds_list_create()
+	destroy_list=ds_list_create()
 	update_list=ds_list_create()
 	selected_list=ds_list_create()
 	pressed_list=ds_list_create()
 	predraw_list=ds_list_create()
 	postdraw_list=ds_list_create()
 	
-	//static methods
+	//MODIFYING METHODS
 	static change_bbox=function(_left,_top,_right,_bottom)
 	{
 		bbox_left=_left
 		bbox_right=_right
 		bbox_top=_top
 		bbox_bottom=_bottom
+	}
+	
+	static transform=function(_x,_y,_xscale,_yscale)
+	{
+		x=_x
+		y=_y
+		image_xscale=_xscale
+		image_yscale=_yscale
+		
+		bbox_left=x
+		bbox_top=y
+		bbox_right=x+sprite_get_width(sprite_index)*image_xscale
+		bbox_bottom=y+sprite_get_height(sprite_index)*image_yscale
 	}
 	
 	static add_method=function(_method,_event)
@@ -62,17 +77,34 @@ function modui_button(_sprite,_subimage,_x,_y) constructor
 			case MODUI_EVENTS.PREDRAW:
 				ds_list_add(predraw_list,_method)
 				break
+			case MODUI_EVENTS.DESTROY:
+				ds_list_add(destroy_list,_method)
+				break
+			case MODUI_EVENTS.INIT:
+				ds_list_add(init_list,_method)
+				break
 		}
 	}
 	
+	static remove_self=function()
+	{
+		array_delete(canvasRef.elements,position,1)
+		destroy()
+	}
+	
+	//EVENTS
 	static update=function()
 	{
+		if bbox_left==0
+		{
+			imposter="sus"
+		}
+		
 		//update functions
 		loop_through_function_list(update_list)
 		
 		if selected
 		{
-			var size=ds_list_size(selected_list)
 			loop_through_function_list(selected_list)
 			if pressed loop_through_function_list(pressed_list)
 		}
@@ -92,5 +124,15 @@ function modui_button(_sprite,_subimage,_x,_y) constructor
 		
 		//loop through other funciton list
 		loop_through_function_list(postdraw_list)
+	}
+	
+	static init=function()
+	{
+		loop_through_function_list(init_list)
+	}
+	
+	static destroy=function()
+	{
+		loop_through_function_list(destroy_list)
 	}
 }
