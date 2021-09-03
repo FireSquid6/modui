@@ -10,6 +10,17 @@ function modui_canvas() constructor
 	
 	//define static methods
 	//element adding
+	static add_global_method=function(_method,_event)
+	{
+		for (var i=0; i<=array_length(elements); i++)
+		{
+			with elements[i]
+			{
+				add_method(_method,_event)
+			}
+		}
+	}
+	
 	static add_element=function(_element)
 	{
 		//add element to array
