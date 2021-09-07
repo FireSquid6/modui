@@ -3,3 +3,8 @@ There's a lot of really good UI libraries for GM with features such as live relo
 
 # dependencies  
 Scribble (JujuAdams): https://github.com/JujuAdams/scribble
+
+
+# script
+If you're already using Scribble, you can just paste the following script into your code:  
+https://pastebin.com/bckFMsUB (it may be outdated though because im kinda stupid and likely to forget to update this)
