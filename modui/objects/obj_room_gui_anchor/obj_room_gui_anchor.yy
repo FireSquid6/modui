@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_anchor",
+    "path": "sprites/spr_anchor/spr_anchor.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
