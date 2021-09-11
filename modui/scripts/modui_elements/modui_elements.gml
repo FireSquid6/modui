@@ -35,7 +35,7 @@ function modui_element_parent() constructor
 		destroy()
 	}
 	
-	static draw=function()
+	static draw=function(_x,_y)
 	{
 		//loop through function list
 		loop_through_function_list(predraw_list)

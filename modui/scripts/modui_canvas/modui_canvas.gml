@@ -85,13 +85,13 @@ function modui_canvas() constructor
 	}
 	
 	//draw function - run in draw/draw gui event respectively
-	static draw=function()
+	static draw=function(_x, _y)
 	{
 		//loop through elements and perform draw
 		var length=array_length(elements)
 		for (var i=0; i<length; i++)
 		{
-			elements[i].draw()
+			elements[i].draw(_x,_y)
 			
 			if global.modui_debug
 			{
