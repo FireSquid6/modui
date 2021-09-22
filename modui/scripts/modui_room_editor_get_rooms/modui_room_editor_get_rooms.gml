@@ -15,7 +15,6 @@ function modui_room_editor_get_rooms()
 		}
 		
 		i = room_next(i)
-	}
-	
+	}	
 	return rooms_list
 }
