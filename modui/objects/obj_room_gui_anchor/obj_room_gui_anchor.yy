@@ -27,7 +27,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Meta Objs",
-    "path": "folders/Libraries/ModUI/Room Editor/Meta Objs.yy",
+    "path": "folders/Libraries/ModUI/Meta Objs.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_room_gui_anchor",

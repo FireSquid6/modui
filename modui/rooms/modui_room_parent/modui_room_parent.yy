@@ -48,8 +48,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Room Editor",
-    "path": "folders/Libraries/ModUI/Room Editor.yy",
+    "name": "Parents",
+    "path": "folders/Libraries/ModUI/Parents.yy",
   },
   "resourceVersion": "1.0",
   "name": "modui_room_parent",

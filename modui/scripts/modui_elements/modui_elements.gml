@@ -82,8 +82,8 @@ function modui_button_sprite(_sprite,_subimage,_x,_y) : modui_element_parent() c
 	//these will be edited with the transform funciton or with the change_bbox function
 	bbox_left=x
 	bbox_top=y
-	bbox_right=x+sprite_get_width(sprite_index)*image_xscale
-	bbox_bottom=y+sprite_get_height(sprite_index)*image_yscale
+	bbox_right=(x+sprite_get_width(sprite_index)) * image_xscale
+	bbox_bottom=(y+sprite_get_height(sprite_index)) * image_yscale
 	
 	//other vars
 	//don't touch these
@@ -120,8 +120,8 @@ function modui_button_sprite(_sprite,_subimage,_x,_y) : modui_element_parent() c
 		
 		bbox_left=x
 		bbox_top=y
-		bbox_right=x+sprite_get_width(sprite_index)*image_xscale
-		bbox_bottom=y+sprite_get_height(sprite_index)*image_yscale
+		bbox_right=(x+sprite_get_width(sprite_index)) * (image_xscale * canvas.canvas_xscale)
+		bbox_bottom=(y+sprite_get_height(sprite_index)) * (image_yscale * canvas.canvas_yscale)
 	}
 	
 	//EVENTS

@@ -3,3 +3,4 @@
 - Add sliders
 	- click on slider and sliderhead moves to it
 	- sliders are initiated with an id and string to use instance_set_variable on
+- Draw canvas scaled

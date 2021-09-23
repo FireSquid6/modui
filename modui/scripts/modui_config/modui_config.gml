@@ -1,3 +1,5 @@
+#macro MODUI_VERSION "1.1.0" //the current version of modui
+
 //you can change this at runtime!
 //controls whether bboxes and stuff are drawn
 global.modui_debug=false
@@ -5,7 +7,7 @@ global.modui_debug=false
 #macro ROOM_GUI_NEXT_ROOM room_first //controls which room the game goes to after finishing looping through all gui rooms
 #macro MODUI_DEBUG_COLOR c_aqua //controls the color debug info is drawn in
 
-//probably don't edit these
+#region DON'T EDIT THESE UNLESS YOU KNOW WHAT YOU'RE DOING
 enum MODUI_EVENTS
 {
 	UPDATE, //every frames
@@ -19,7 +21,7 @@ enum MODUI_EVENTS
 
 enum MODUI_ELEMENT_TYPES
 {
-	BUTTON,
-	SLIDER
+	BUTTON, //clickable button
+	SLIDER //dragable slider
 }
-
+#endregion

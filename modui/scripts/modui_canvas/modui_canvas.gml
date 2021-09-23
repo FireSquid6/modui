@@ -1,12 +1,14 @@
 function modui_canvas() constructor
 {
 	//get initial variables and methods
-	elements=[]
-	selectedPosition=0
-	pressedPosition=0
-	cursor_x=0
-	cursor_y=0
-	pressed=0
+	elements = []
+	selectedPosition = 0
+	pressedPosition = 0
+	cursor_x = 0
+	cursor_y = 0
+	pressed = 0
+	canvas_xscale = 0
+	canvas_yscale = 0
 	
 	//define static methods
 	//element adding
@@ -37,6 +39,12 @@ function modui_canvas() constructor
 	{
 		elements[_pos].canvasRef=self
 		elements[_pos].position=_pos
+	}
+	
+	static scale_canvas=function(_xscale, _yscale)
+	{
+		canvas_xscale = _xscale
+		canvas_yscale = _yscale
 	}
 	
 	//update function - run each frame in step event
@@ -86,7 +94,7 @@ function modui_canvas() constructor
 	
 	//draw function - run in draw/draw gui event respectively
 	static draw=function(_x, _y)
-	{
+	{		
 		//loop through elements and perform draw
 		var length=array_length(elements)
 		for (var i=0; i<length; i++)
