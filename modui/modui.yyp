@@ -72,6 +72,7 @@
     {"id":{"name":"CleanTransformOriginSet","path":"scripts/CleanTransformOriginSet/CleanTransformOriginSet.yy",},"order":5,},
     {"id":{"name":"CHANGELOG","path":"notes/CHANGELOG/CHANGELOG.yy",},"order":6,},
     {"id":{"name":"obj_modui_room_manager","path":"objects/obj_modui_room_manager/obj_modui_room_manager.yy",},"order":2,},
+    {"id":{"name":"anchor_set_pos","path":"scripts/anchor_set_pos/anchor_set_pos.yy",},"order":3,},
     {"id":{"name":"scribble_flush_everything","path":"scripts/scribble_flush_everything/scribble_flush_everything.yy",},"order":0,},
     {"id":{"name":"scribble_Methods","path":"notes/scribble_Methods/scribble_Methods.yy",},"order":9,},
     {"id":{"name":"CleanSpline","path":"scripts/CleanSpline/CleanSpline.yy",},"order":12,},
