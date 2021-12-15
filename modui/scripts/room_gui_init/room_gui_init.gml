@@ -6,15 +6,15 @@ function room_gui_init()
 	
 	with par_element_object
 	{
-		//get position
-		vert_anchor_dist = x - 
-		
 		//basic info
 		element = modui_button_sprite(sprite_index,image_index,xx,yy)
 		element.image_xscale = image_xscale
 		element.image_yscale = image_yscale
 		element.image_angle = image_angle
 		element.image_blend = image_blend
+		
+		//add self to canvas
+		canvas.add_element(element)
 	}
 	
 	return canvas
